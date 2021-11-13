@@ -4,12 +4,12 @@ import Screen from "../components/laptop/Screen";
 import Keyboard from "../components/laptop/Keyboard";
 import "../laptop.css"
 
-const Laptop = () => {
+const Laptop = (props) => {
+    let {name, color, madeIn, buttonColor} = props
     return(
         <div className={'laptop'}>
-            <Screen />
-            <Keyboard />
-            <Casing />
+            <Casing color={color}/>
+            <Keyboard  name={name} madeIn={madeIn} buttonColor={buttonColor} />
         </div>
     )
 }
