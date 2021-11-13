@@ -2,7 +2,7 @@ import React from 'react';
 
 const Screen = () => {
     return (
-        <div>
+        <div className="screen">
             screen
         </div>
     );
