@@ -9,9 +9,9 @@ function App() {
       <div className="container">
         {/*<Laptop name={"Apple"} color={"gold"} madeIn={"China"} buttonColor={"magenta"}/>*/}
         {/*<Laptop name={"Dell"} color={"pink"} madeIn={"Lagos"} buttonColor={"darkOrange"}/>*/}
-          <Register />
+        {/*  <Register />*/}
           {/*<Login />*/}
-          {/*<Home />*/}
+          <Home />
       </div>
   )
 }
