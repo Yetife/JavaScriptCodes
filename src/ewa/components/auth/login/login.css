@@ -1,5 +1,5 @@
 .login_container {
-    background-color: white;
+    background-color: aliceblue;
     height: 90vh;
     width: 20vw;
     padding: 20px;
@@ -63,3 +63,9 @@
     border: none;
     width: 88%;
    }
+.bottom_circle {
+        position: absolute;
+        bottom: 5rem;
+        z-index: -1;
+        right: 0;
+    }
