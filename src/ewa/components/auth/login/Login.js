@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Input from '../../reusables/Input'
 import './login.css'
 import img from '../../../../assets/background.svg'
+import img2 from '../../../../assets/circle2.svg'
 import Button from '../../reusables/Button'
 
-const Login = () => {
+const Login = (props) => {
 
+    let {setState} = props
+    
     const inputFields = [
         {label: "Email",  placeholder: "Enter your email"},
         {label: "Password" , placeholder: "Enter your password"},
@@ -18,7 +21,7 @@ const Login = () => {
 
                 </div>
 
-                <button>
+                <button onClick={() => setState("register")}>
                     REGISTER
                 </button>
             </div>
@@ -33,6 +36,8 @@ const Login = () => {
             </div>
 
             <Button name="login" />
+
+            <img className="bottom_circle" src={img2} alt="circlebackground" />
         </div>
     );
 };
