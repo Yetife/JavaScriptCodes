@@ -7,7 +7,7 @@ import Button from '../../reusables/Button'
 
 const Login = (props) => {
 
-    let {setState} = props
+    let { setState } = props
     
     const inputFields = [
         {label: "Email",  placeholder: "Enter your email"},
