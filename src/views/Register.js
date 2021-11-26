@@ -47,6 +47,10 @@ class Register extends Component {
                 <Input label="First Name" fieldType="text" placeholder="Enter first Name" name="firstName"  value={firstName} onChange={this.handleChange}/>
                 <Input label="Last Name" fieldType="text" placeholder="Enter last Name" name="lastName"  value={lastName} onChange={this.handleChange}/>
                 <Input label="Password" fieldType="password" placeholder="Enter Password" name="customerPassword" value={customerPassword} onChange={this.handleChange}/>
+
+                <button className="register_btn">
+                    REGISTER
+                </button>
             </form>
             </div>
         );
