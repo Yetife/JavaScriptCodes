@@ -2,7 +2,6 @@ import React from 'react';
 import Text from './Text';
 // import Input from './Input'
 import backgroundCircle from '../../assets/circle2.svg'
-import RegisterButton from './RegisterButton'
 
 const Frame = () => {
     return (
@@ -10,7 +9,6 @@ const Frame = () => {
             <Text />
             {/*<Input />*/}
             <img src={backgroundCircle} className={"bottom-circle"} alt={"circle"}/>
-            <RegisterButton />
         </div>
     );
 };
