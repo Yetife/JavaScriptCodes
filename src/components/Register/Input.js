@@ -4,7 +4,7 @@ import React from 'react';
 const Input = (props) => {
     let {label, fieldType, placeholder, name, value, onChange} = props
     return (
-        <div className={"input_container"} >
+        <div className="input_container" >
             <label>
                 {label}
             </label>
