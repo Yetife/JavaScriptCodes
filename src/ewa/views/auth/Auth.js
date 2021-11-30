@@ -4,7 +4,7 @@ import Register from '../../components/auth/register/Register'
 
 const Auth = () => {
     
-    const [state, setState] = useState("login")
+    const [state, setState] = useState("Login")
     
     return (
         <div>
