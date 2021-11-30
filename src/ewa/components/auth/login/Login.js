@@ -21,7 +21,7 @@ const Login = (props) => {
 
                 </div>
 
-                <button onClick={() => setState("register")}>
+                <button onClick={() => setState("Register")}>
                     REGISTER
                 </button>
             </div>
@@ -35,7 +35,7 @@ const Login = (props) => {
                 {inputFields.map((field, index) => <Input key={index} field={field}/>)}
             </div>
 
-            <Button name="login" />
+            <Button name="Login" />
 
             <img className="bottom_circle" src={img2} alt="circlebackground" />
         </div>
