@@ -7,13 +7,33 @@ import Button from '../../reusables/Button'
 
 const Login = (props) => {
 
-    let { setState } = props
+    let { setState, setAuthenticated } = props
     
     const inputFields = [
-        {label: "Email",  placeholder: "Enter your email"},
-        {label: "Password" , placeholder: "Enter your password"},
+        {name: "email", label: "Email",  placeholder: "Enter your email"},
+        {name: "password", label: "Password" , placeholder: "Enter your password"},
     ]
 
+    let initialData = {
+            email: "", password: ""
+        }
+
+      const [inputData, setInputData] = useState(initialData)
+
+    const handleLogin = () => {
+        if (inputData.email !== "" && inputData.password !== "") {
+            let email = inputData.email
+            localStorage.setItem("userEmail", email)
+            setAuthenticated(true)
+        }else {
+            alert("User info is incomplete")
+        }
+    }
+
+    const handleInput = (e) => {
+        let data = {...inputData, [e.target.name]: e.target.value }
+        setInputData(data)
+    }
     return (
         <div className={"login_container"}>
             <div className={"login_header"}>
@@ -32,10 +52,11 @@ const Login = (props) => {
             </div>
 
             <div className="form_container">
-                {inputFields.map((field, index) => <Input key={index} field={field}/>)}
+                {inputFields.map((field, index) =>
+                    <Input value= {inputData[field.name]} onChange={handleInput} key={index} field={field} />)}
             </div>
 
-            <Button name="Login" />
+            <Button name="Login" onClick={handleLogin}/>
 
             <img className="bottom_circle" src={img2} alt="circlebackground" />
         </div>
