@@ -27,6 +27,7 @@ function App() {
         {/*<Laptop name={"Dell"} color={"pink"} madeIn={"Lagos"} buttonColor={"darkOrange"}/>*/}
           {authenticated ? <Dashboard /> : <Auth setAuthenticated={setAuthenticated}/>}
         {/*  <Register />*/}
+        {/*  <Dashboard />*/}
       </div>
   )
 }
