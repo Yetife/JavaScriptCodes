@@ -1,9 +1,15 @@
 import React from 'react';
+import img from "../../../assets/background.svg"
+import "./post.css"
 
-const Post = () => {
+const Post = ({post}) => {
     return (
-        <div>
-            Post
+        <div className="post">
+            <img src= {post.url} alt="post" className={"post_image"}/>
+            <div className={"post_body"}>
+                <h5>{`Title: ${post.albumId}`}</h5>
+                <p>{post.title}</p>
+            </div>
         </div>
     );
 };
