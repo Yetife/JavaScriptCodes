@@ -28,7 +28,7 @@ const Login = (props) => {
         () => {
             console.log("I mounted in LOGIN")
             return () => {
-                console.log("I unMounted from LOGIN")
+                console.log("I unmounted from LOGIN")
             }
         }, [inputData])
 
