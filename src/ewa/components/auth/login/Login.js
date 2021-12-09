@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Input from '../../reusables/Input'
 import './login.css'
 import img from '../../../../assets/background.svg'
@@ -18,7 +18,20 @@ const Login = (props) => {
             email: "", password: ""
         }
 
-      const [inputData, setInputData] = useState(initialData)
+    const [inputData, setInputData] = useState(initialData)
+    const handleInput = (e) => {
+        let data = {...inputData, [e.target.name]: e.target.value }
+        setInputData(data)
+    }
+
+    useEffect(
+        () => {
+            console.log("I mounted in LOGIN")
+            return () => {
+                console.log("I unMounted from LOGIN")
+            }
+        }, [inputData])
+
 
     const handleLogin = () => {
         if (inputData.email !== "" && inputData.password !== "") {
@@ -30,10 +43,6 @@ const Login = (props) => {
         }
     }
 
-    const handleInput = (e) => {
-        let data = {...inputData, [e.target.name]: e.target.value }
-        setInputData(data)
-    }
     return (
         <div className={"login_container"}>
             <div className={"login_header"}>
